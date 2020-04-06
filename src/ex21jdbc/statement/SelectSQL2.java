@@ -10,7 +10,7 @@ public class SelectSQL2 extends ConnectDB{
 	/*
 	ResultSet클래스
 		: select문실행시 쿼리의 실행결과가 ResultSet객체에 저장된다.
-		결과로 방환된 레코드의 처음부터 마지막까지 next()메소드를 통해
+		결과로 반환된 레코드의 처음부터 마지막까지 next()메소드를 통해
 		확인후 반복하면서 추출하게 된다.
 	
 		-getXXX()계열의 메소드
