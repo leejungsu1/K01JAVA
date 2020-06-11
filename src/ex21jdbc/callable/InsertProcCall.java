@@ -37,7 +37,7 @@ public class InsertProcCall extends IConnectImpl{
 				프로시저는 return값이 없으므로 함수처럼 ?= 로 시작하지 않음
 				return값 대신 out파라미터를 통해 값을 반환받음
 			 */
-			csmt = con.prepareCall("{callKosmoMemberInsert(?,?,?,?)}");
+			csmt = con.prepareCall("{call KosmoMemberInsert(?,?,?,?)}");
 			//2-1. in파라미터 설정
 			csmt.setString(1, scanValue("아이디"));
 			csmt.setString(2, scanValue("패스워드"));

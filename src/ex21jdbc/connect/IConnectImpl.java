@@ -6,11 +6,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class IConnectImpl implements IConnect{
+	//정적쿼리 처리를 위한 객체
+	public Statement stmt;
+	
 	//동적쿼리 처리를 위한 객체
 	public PreparedStatement psmt;
+	
 	//프로시져 혹은 함수를 호출하기 위한 객체
 	public CallableStatement csmt;
 	
@@ -60,6 +65,7 @@ public class IConnectImpl implements IConnect{
 			if(con!=null) con.close();
 			if(psmt!=null) psmt.close();
 			if(rs!=null) rs.close();
+			if(stmt!=null) stmt.close();
 			System.out.println("자원 반납 완료");
 		}
 		catch(Exception e) {
